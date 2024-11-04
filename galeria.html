@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo2.png" alt="Logo da Clínica Estética">
+            </div>
+            <h1>Clínica Estética - Mônica Barbosa</h1>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html" target="_blank">Pagina Inicial</a></li>
+                    <li><a href="galeria.html" target="_blank">Galeria de fotos</a></li>
+                    <li><a href="tratamentos.html" target="_blank">Tratamentos</a></li>
+                    <li><a href="faleconosco.html" target="_blank">Fale Conosco</a></li>
+                    <li><a href="quememonica.html" target="_blank">Quem é Mônica?</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="mensagem">
+        <p>Bem-vindo à minha clínica de estética!</p>
+        <p>Aqui, a beleza é uma verdadeira paixão. Cada atendimento é uma oportunidade de celebrar a singularidade de cada pessoa que passa por aqui. Acredito que a estética vai além da aparência; trata-se de promover o bem-estar e a autoestima. </p>
+        <p>Estou dedicada a oferecer tratamentos personalizados, utilizando técnicas e produtos de alta qualidade para realçar a sua beleza natural. Venha viver uma experiência transformadora!</p>
+    </section>
+
+    <div class="gallery">
+        <img src="img/monica1_11zon.jpeg" alt="Foto 1" onclick="openModal(this)">
+        <img src="img/monica2_11zon.jpeg" alt="Foto 2" onclick="openModal(this)">
+        <img src="img/monica3_11zon.jpeg" alt="Foto 3" onclick="openModal(this)">
+        <img src="img/monica4_11zon.jpeg" alt="Foto 4" onclick="openModal(this)">
+        <img src="img/11zon_trat1.jpeg" alt="Foto 5" onclick="openModal(this)">
+        <img src="img/11zon_trat2.jpeg" alt="Foto 6" onclick="openModal(this)">
+        <img src="img/11zon_trat3.jpeg" alt="Foto 7" onclick="openModal(this)">
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+<footer>
+    <p>© 2024 Clínica Estética Mônica Barbosa - Todos os direitos reservados</p>
+</footer>
+</html>
